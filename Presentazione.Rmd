@@ -1,0 +1,121 @@
+---
+title: "Incidenti Formula 1"
+author: "Ligugnana Alessandro"
+date: 'A.A. 2021/2022'
+output: ioslides_presentation
+df_print: paged
+runtime: shiny
+---
+
+```{r setup, include=FALSE}
+library(dplyr)
+library(tidyr)
+library(ggplot2)
+library(ggpubr)
+library(gt)
+
+
+knitr::opts_chunk$set(echo = FALSE)
+source("ProgettoFinale.r")
+knitr::opts_chunk$set(warning=FALSE, message=FALSE)
+```
+
+<style>
+slides > slide {
+  overflow-x: auto !important;
+  overflow-y: auto !important;
+}
+</style>
+
+## Caso di Studio
+
+Si vogliono analizzare gli incidenti e le problematiche, legate a collisioni o avarie, del campionato mondiale di Formula 1 nella storia. Nello specifico tratteremo:
+
+-   Tipologie e numero di incidenti negl'anni
+-   Incidenti mortali nelle gare ufficiali
+-   Analisi degli incidenti suddivisa per scuderia
+-   Piloti coinvolti nel maggior numero di incidenti
+-   Circuiti più pericolosi
+-   Influenza della velocità nella storia
+
+## Incidenti mortali in gara
+
+
+```{r}
+tabellaIncidentiMortali
+```
+
+## Tipologie incidenti
+
+```{r}
+graficoIncidenti
+```
+
+## Incidenti scuderie
+
+```{r}
+graficoIncidentiScuderieTop
+```
+
+## Incidenti scuderie
+
+Tipologie di incidenti delle scuderie con più incidenti
+
+```{r}
+graficoScuderie1
+```
+
+## Incidenti scuderie
+
+Tipologie di incidenti delle scuderie con più incidenti
+
+```{r}
+graficoScuderie2
+```
+
+## Incidenti piloti
+
+```{r}
+graficoIncidentiPiloti1
+```
+
+## Incidenti piloti
+
+Tipologie di incidenti dei piloti più coinvolti
+
+```{r}
+graficoIncidentiPiloti2
+```
+
+## Incidenti circuiti
+
+```{r}
+graficoIncidentiCircuiti
+```
+
+## Media annuale incidenti circuiti
+
+```{r}
+graficoMediaIncidentiCircuiti
+```
+
+## Influenza velocità
+
+```{r}
+graficoTempi
+```
+
+## Influenza velocità
+
+```{r}
+graficoIncidenzaVelocita
+```
+
+
+## Fonti 
+Incidenti Mortali <br> 
+https://it.wikipedia.org/wiki/Incidenti_mortali_di_Formula_1
+
+Dataset <br>
+https://www.kaggle.com/datasets/rohanrao/formula-1-world-championship-1950-2020
+
